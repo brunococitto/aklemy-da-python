@@ -3,7 +3,7 @@ from logger  import log
 
 try:
     log.info('Initializing database')
-    script = open('init.sql', 'r')
+    script = open('scripts/init.sql', 'r')
     engine = create_engine('postgresql://root:root@localhost:5432/db')
     engine.connect()
     engine.execute(script.read())

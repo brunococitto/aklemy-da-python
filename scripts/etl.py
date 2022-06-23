@@ -32,7 +32,7 @@ class Etl:
         # Build filename using current date and category
         folder = datetime.now().strftime('%Y-%B')
         file = f"{category}-{datetime.now().strftime('%d-%m-%Y')}"
-        path = f"../data/{category}/{folder}/{file}.csv"
+        path = f"data/{category}/{folder}/{file}.csv"
         os.makedirs(os.path.dirname(path), exist_ok=True)
         
         try:
@@ -89,9 +89,9 @@ class Etl:
         # Find latest available data and load into a DF
         try:
             log.info(f"Loading {category} data")
-            months = {x:datetime.strptime(x, '%Y-%B') for x in os.listdir(f"../data/{category}")}
-            files = {x:get_date_from_name(x) for x in os.listdir(f"../data/{category}/{max(months)}")}
-            source_df = pd.read_csv(f"../data/{category}/{max(months)}/{max(files)}")
+            months = {x:datetime.strptime(x, '%Y-%B') for x in os.listdir(f"data/{category}")}
+            files = {x:get_date_from_name(x) for x in os.listdir(f"data/{category}/{max(months)}")}
+            source_df = pd.read_csv(f"data/{category}/{max(months)}/{max(files)}")
             
             log.info(f"Successfuly loaded {category} data")
         except Exception as e:
