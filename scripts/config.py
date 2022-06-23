@@ -12,7 +12,7 @@ class Config:
         for param in DB_PARAMS:
             DB_PARAMS[param] = config(param, default=DB_PARAMS[param], cast=str)
         self.DB_URI = f"postgresql://{DB_PARAMS['DB_USER']}:{DB_PARAMS['DB_PASSWORD']}@{DB_PARAMS['DB_HOST']}:{DB_PARAMS['DB_PORT']}/{DB_PARAMS['DB_NAME']}"
-
+        self.LOCALE = config('LOCALE', default='', cast=str)
         self.SOURCES = config('SOURCES', default="[]", cast=literal_eval)
         log.info("Configuration loaded successfuly")
 

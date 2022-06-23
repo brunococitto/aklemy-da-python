@@ -1,5 +1,4 @@
 import os
-import locale
 import requests
 import pandas as pd
 import numpy as np
@@ -9,9 +8,6 @@ from unidecode import unidecode
 from sqlalchemy import create_engine
 
 from utils import to_snake_case, get_date_from_name
-
-# Set locale to get month names in correct language
-locale.setlocale(locale.LC_ALL, 'es_ES.utf-8')
 
 class Etl:
     """"""

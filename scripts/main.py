@@ -1,10 +1,13 @@
 import pandas as pd
-
+import locale
 from config import Config
 from etl import Etl
 
 config = Config()
 etl = Etl(config.DB_URI)
+
+# Set locale to get month names in correct language
+locale.setlocale(locale.LC_TIME, config.LOCALE)
 
 dfs = {}
 
