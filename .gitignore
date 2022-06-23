@@ -1,0 +1,6 @@
+env
+data
+docker-volumes
+logs
+
+docker-compose.yml
