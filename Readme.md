@@ -11,7 +11,7 @@
 3. Activar el entorno virtual de Python con el comando
 `source venv/bin/activate`
 4. Instalar las dependencias del proyecto con el comando
-`pip -r install requirements.txt`
+`pip install -r requirements.txt`
 5. Establecer la configuración en el archivo .env según corresponda con un editor de texto.
 6. Inicializar la base de datos con el comando
 `python scripts/db-init.py`
