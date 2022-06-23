@@ -1,6 +1,10 @@
+
 # Challenge de Data Analytics con Python
+
 ## Instrucciones para deployar el proyecto
+
 - Es requisito tener instalado Python para correr el proyecto. El proyecto fue realizado con la versión 3.8.10 de Python.
+
 1. Clonar el repositorio utilizando `git clone https://github.com/brunococitto/aklemy-da-python.git` o descargarlo como ZIP y extraerlo en una carpeta.
 2. Utilizando una terminal, dentro de la carpeta del repositorio, crear un entorno virtual de Python con el comando
 `python -m venv venv`
