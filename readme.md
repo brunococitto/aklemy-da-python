@@ -9,5 +9,7 @@
 4. Instalar las dependencias del proyecto con el comando
 `pip -r install requirements.txt`
 5. Establecer la configuración en el archivo .env según corresponda con un editor de texto.
-6. Ejecutar el proyecto utilizando el comando
+6. Inicializar la base de datos con el comando
+`python scripts/db-init.py`
+7. Ejecutar el proyecto utilizando el comando
 `python scripts/main.py`
